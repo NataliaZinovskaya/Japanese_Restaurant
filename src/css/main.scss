@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/MyriadPro-Regular.otf);
+}
+
+@font-face {
+    font-family: GoodDog;
+    src: url(../fonts/GOODDC__.TTF);
+}
+
+@import "_variables.scss";
+
+// ==== wow animation delay ====
+.animated {
+    animation-duration: 4000ms;
+}
+
+// =============================
+
+// ==== header ====
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/headerimg.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    &__nav {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        z-index: 10;
+        background-color: #212121;
+
+        &-links-list {
+            height: inherit;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                &:nth-child(1) {
+                    padding-right: 40px;
+                }
+            }
+        }
+
+        &-links-list-href {
+            @include text(Montserrat, 35px, #9caf73, none, 300);
+            text-decoration: none;
+            padding-right: 30px;
+
+        }
+    }
+
+    &-information {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__logo {
+            display: block;
+            width: 145px;
+        }
+
+        &__text-opening {
+            @include text(MyriadPro, 57px, #afc67b, none, 300);
+            padding-top: 85px;
+            letter-spacing: 2px;
+
+            &_bold {
+                @include text(MyriadPro, 78px, #afc67b, none, 600);
+                letter-spacing: 3px;
+            }
+        }
+
+        &__link-learn-more {
+            text-decoration: none;
+            margin-top: 80px;
+            display: block;
+            @include text(MyriadPro, 49px, #afc67b, 1.5em, 300);
+            text-align: center;
+            width: 320px;
+            background-color: rgba(73, 79, 62, .6);
+        }
+    }
+}
+
+// ==== /header ====
+
+// ==== actually cook ====
+
+.actually-block {
+    width: 100%;
+    min-height: 490px;
+    background-color: #212121;
+    position: relative;
+
+    &__image {
+        position: absolute;
+        right: 0;
+    }
+
+    &__title {
+        @include text(GoodDog, 29px, #afc67b, none, 300);
+        padding-top: 168px;
+        padding-left: 100px;
+    }
+
+    &__text {
+        @include text(MyriadPro, 19px, #ffffff, 1.5em, 300);
+        width: 37%;
+        padding-top: 47px;
+        padding-left: 100px;
+        position: relative;
+    }
+}
+
+// ==== /actually cook ====
+
+// ==== about us ====
+.about-us {
+    width: 100%;
+    min-height: 380px;
+    background-color: #45493b;
+
+    &-wrapper {
+        max-width: 1110px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-block {
+        width: 30%;
+
+        &__image {
+            padding-top: 95px;
+        }
+
+        &__title {
+            @include text(GoodDog, 25px, #e8e8e8, none, 300);
+            padding-top: 28px;
+            padding-bottom: 28px;
+        }
+
+        &__text {
+            @include text(Montserrat, 17px, #c6c6c5, 1.5em, 100);
+        }
+    }
+}
+
+// ==== /about us ====
