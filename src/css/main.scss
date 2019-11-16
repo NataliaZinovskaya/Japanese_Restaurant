@@ -48,13 +48,19 @@
                     padding-right: 40px;
                 }
             }
+
         }
 
         &-links-list-href {
             @include text(Montserrat, 35px, #9caf73, none, 300);
             text-decoration: none;
             padding-right: 30px;
+            transition: .5s;
 
+            &:hover {
+                color: #c6c6c5;
+                transition: .5s;
+            }
         }
     }
 
@@ -88,6 +94,12 @@
             text-align: center;
             width: 320px;
             background-color: rgba(73, 79, 62, .6);
+            transition: .5s;
+
+            &:hover {
+                background-color: rgba(100, 105, 102, .6);
+                transition: .5s;
+            }
         }
     }
 }
@@ -157,3 +169,209 @@
 }
 
 // ==== /about us ====
+
+// ==== bring tradition ====
+.bring-traditions-wrapper {
+    width: 100%;
+    background-color: #212121;
+    padding-top: 90px;
+    padding-bottom: 85px;
+
+    .bring-traditions {
+        max-width: 1080px;
+        margin: 0 auto;
+        background-color: #45493b;
+
+        &__title {
+            @include text(GoodDog, 45px, #afc67b, none, 300);
+            text-align: center;
+            padding-top: 65px;
+        }
+
+        &__subtitle {
+            @include text(MyriadPro, 42px, #ffffff, 1.2em, 300);
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        .bring-traditions-our-menu-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+            .bring-traditions-our-menu {
+                overflow: hidden;
+                display: flex;
+                transition: .5s;
+
+                &:hover {
+                    background-color: #718543;
+                    transition: .5s;
+                }
+
+                &:hover .bring-traditions-our-menu__image-left {
+                    transform: scale(1.09) translateX(-10px);
+                    transition: .5s;
+                }
+
+                &:hover .bring-traditions-our-menu__image-right {
+                    transform: scale(1.09) translateX(10px);
+                    transition: .5s;
+                }
+
+                &__image-left,
+                &__image-right {
+                    width: 270px;
+                    height: 275px;
+                    transition: .5s;
+                }
+
+                &__description {
+                    max-width: 270px;
+                    height: 275px;
+                    text-align: center;
+
+                    &-title {
+                        @include text(GoodDog, 30px, #afc67b, none, 300);
+                        padding-top: 60px;
+                    }
+
+                    &-text {
+                        @include text(MyriadPro, 16px, #e8e8e8, 1.2em, 300);
+                        width: 55%;
+                        margin: 0 auto;
+                        padding-top: 25px;
+                    }
+
+                    &-price {
+                        @include text(GoodDog, 25px, #e8e8e8, none, 300);
+                        padding-top: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ==== /bring tradition ====
+
+// ==== simple things ====
+
+.simple-things {
+    width: 100%;
+    background-color: #3e4136;
+    text-align: center;
+
+    &__title {
+        @include text(GoodDog, 41px, #afc67b, none, 300);
+        padding-top: 110px;
+    }
+
+    &__text {
+        @include text(MyriadPro, 20px, #e8e8e8, 1.2em, 300);
+        width: 45%;
+        margin: 0 auto;
+        padding: 26px 0 40px 0;
+    }
+
+    &__image {
+        padding-bottom: 90px;
+    }
+}
+
+// ==== /simple things ====
+
+// ==== discover our menu ====
+
+.discover-our-menu {
+    width: 100%;
+    height: 1000px;
+    background: url(../img/menu.jpg) no-repeat;
+    background-size: cover;
+    padding-top: 245px;
+    background-attachment: fixed;
+
+    .discover-our-menu-titles {
+        background-color: #3e4136;
+
+        &__title {
+            @include text(GoodDog, 70px, #e7e7e7, none, 300);
+            text-align: center;
+            padding-top: 45px;
+        }
+
+        &__subtitle {
+            @include text(MyriadPro, 45px, #e7e7e7, none, 300);
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    }
+
+    .discover-our-menu-wrapper {
+        width: 100%;
+        background-color: #3e4136;
+
+        .discover-our-menu-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            &__left,
+            &__right {
+                max-width: 45%;
+
+                &-box {
+                    display: flex;
+                    padding-bottom: 50px;
+                    transition: .7s;
+
+                    &:hover .discover-our-menu-content__left-box_image {
+                        background-color: #9ab05f;
+                        transition: .5s;
+                    }
+
+                    &:hover .discover-our-menu-content__left-box_text-link {
+                        color: #9ab05f;
+                        transition: .5s;
+                    }
+
+                    &_image {
+                        background-color: #e8e8e8;
+                        width: 120px;
+                        height: 85px;
+                        border-radius: 43px;
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+
+                    &_text {
+                        padding-left: 15px;
+
+                        &-link {
+                            text-decoration: none;
+                            @include text(GoodDog, 25px, #e7e7e7, none, 300);
+                        }
+
+                        &-description {
+                            @include text(Montserrat, 16px, #c6c6c5, 1.5em, 300);
+                            width: 80%;
+                            padding-top: 15px;
+
+                            span {
+                                @include text(GoodDog, 25px, #e7e7e7, none, 300);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ==== /discover our menu ====
