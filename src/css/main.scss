@@ -13,6 +13,7 @@
 @import "_variables.scss";
 
 // ==== wow animation delay ====
+
 .animated {
     animation-duration: 4000ms;
 }
@@ -42,6 +43,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            text-transform: uppercase;
 
             li {
                 &:nth-child(1) {
@@ -59,7 +61,6 @@
 
             &:hover {
                 color: #c6c6c5;
-                transition: .5s;
             }
         }
     }
@@ -98,7 +99,6 @@
 
             &:hover {
                 background-color: rgba(100, 105, 102, .6);
-                transition: .5s;
             }
         }
     }
@@ -205,17 +205,14 @@
 
                 &:hover {
                     background-color: #718543;
-                    transition: .5s;
                 }
 
                 &:hover .bring-traditions-our-menu__image-left {
                     transform: scale(1.09) translateX(-10px);
-                    transition: .5s;
                 }
 
                 &:hover .bring-traditions-our-menu__image-right {
                     transform: scale(1.09) translateX(10px);
-                    transition: .5s;
                 }
 
                 &__image-left,
@@ -284,7 +281,7 @@
 
 .discover-our-menu {
     width: 100%;
-    height: 1000px;
+    min-height: 1000px;
     background: url(../img/menu.jpg) no-repeat;
     background-size: cover;
     padding-top: 245px;
@@ -375,3 +372,157 @@
 }
 
 // ==== /discover our menu ====
+
+// ==== our events ====
+
+.events {
+    width: 100%;
+    background-color: #383b32;
+
+    &__title {
+        @include text(GoodDog, 77px, #afc67b, none, 300);
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    &__subtitle {
+        @include text(MyriadPro, 47px, #e7e7e7, none, 300);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-content {
+        max-width: 1090px;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-box {
+            max-width: 340px;
+            transition: .5s;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 1px 1px 10px 3px #afc67b;
+            }
+
+            &__description {
+                background-color: #e5e5e5;
+                min-height: 225px;
+
+                &-title {
+                    @include text(Montserrat, 14px, #585858, none, bold);
+                    padding: 25px 0 35px 20px;
+                }
+
+                &-subtitle {
+                    @include text(Montserrat, 16px, #585858, none, bold);
+                    padding-left: 20px;
+                }
+
+                &-text {
+                    @include text(Montserrat, 16px, #585858, 1.5em, 300);
+                    padding: 10px 60px 30px 20px;
+                }
+
+                &-link {
+                    @include text(Montserrat, 14px, #585858, none, bold);
+                    text-decoration: none;
+                    margin-left: 20px;
+                    margin-bottom: 25px;
+                    border-bottom: 5px solid #afc67b;
+
+                    &:hover {
+                        color: #709c67;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ==== /our events ====
+
+// ==== footer ====
+
+.footer {
+    width: 100%;
+    background-color: #212121;
+    text-align: center;
+
+    &__image {
+        padding: 50px 0 20px 0;
+    }
+
+    &__text {
+        @include text(Montserrat, 19px, #8ea065, 1.5em, 300);
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    &__text-name {
+        @include text(GoodDog, 29px, #afc67b, none, 300);
+        padding: 20px 0 30px 0;
+    }
+
+    &__social {
+        display: flex;
+        padding-bottom: 40px;
+        justify-content: center;
+
+        &-link-1 {
+            background: url(../img/fb1.png) center no-repeat;
+            display: block;
+            width: 48px;
+            height: 48px;
+            transition: .5s;
+            padding: 0 10px;
+
+            &:hover {
+                background: url(../img/fb11.png) center no-repeat;
+            }
+        }
+
+        &-link-2 {
+            @extend .footer__social-link-1;
+            background: url(../img/tw1.png) center no-repeat;
+
+            &:hover {
+                background: url(../img/tw11.png) center no-repeat;
+            }
+        }
+
+        &-link-3 {
+            @extend .footer__social-link-1;
+            background: url(../img/in1.png) center no-repeat;
+
+            &:hover {
+                background: url(../img/in11.png) center no-repeat;
+            }
+        }
+
+        &-link-4 {
+            @extend .footer__social-link-1;
+            background: url(../img/px1.png) center no-repeat;
+
+            &:hover {
+                background: url(../img/px11.png) center no-repeat;
+            }
+        }
+
+        &-link-5 {
+            @extend .footer__social-link-1;
+            background: url(../img/gg1.png) center no-repeat;
+
+            &:hover {
+                background: url(../img/gg11.png) center no-repeat;
+            }
+        }
+    }
+}
+
+// ==== /footer ====
