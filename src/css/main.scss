@@ -20,11 +20,101 @@
 
 // =============================
 
+// ==== adaptive menu ====
+
+.hidden-menu-wrapper {
+    display: none;
+}
+
+.hidden-menu-list {
+    display: block;
+    position: fixed;
+    padding: 50px 0px 24px 0px;
+    text-align: center;
+    width: 100%;
+    background-color: #c7d1ad;
+    transition: left 0.9s;
+    /*Замедление выдвижения слева*/
+    left: -100vh;
+    /*Скрыть меню слева*/
+    z-index: 10;
+}
+
+.hidden-menu-link {
+    font-family: MyriadPro;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #5c5f54;
+    text-decoration: none;
+    line-height: 1.7em;
+    transition: left 0.5s;
+
+    &:hover {
+        color: #468757;
+        cursor: pointer;
+        font-weight: 900;
+    }
+}
+
+.hidden-menu-list-ticker {
+    display: none;
+    /*Скрыть checkbox*/
+}
+
+.hidden-menu-button {
+    /*Положение кнопки*/
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left .3s;
+    z-index: 11;
+    width: 35px;
+}
+
+.hidden-menu-button span {
+    /*Редактировать вид общего span, как дочернего hidden-menu__button*/
+    display: block;
+    height: 5px;
+    background-color: #9baf6d;
+    margin: 5px 0 0;
+    position: relative;
+}
+
+.hidden-menu-list-ticker:checked~.hidden-menu-button {
+    /*При нажатии определяет, на сколько изображение меню сдвинется влево*/
+    right: 270px;
+}
+
+.hidden-menu-list-ticker:checked~.hidden-menu-list {
+    left: 0;
+}
+
+.hidden-menu-list-ticker:checked~.hidden-menu-button .hidden-menu-first-line {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hidden-menu-list-ticker:checked~.hidden-menu-button .hidden-menu-second-line {
+    /*При нажатии скрывает среднюю линию*/
+    opacity: 0;
+}
+
+.hidden-menu-list-ticker:checked~.hidden-menu-button .hidden-menu-third-line {
+    transform: rotate(-45deg);
+    top: -10px;
+}
+
+// ==== /adaptive menu ====
+
 // ==== header ====
 .header {
     width: 100%;
     height: 100vh;
-    background: url(../img/headerimg.png) no-repeat;
+    background: url(../img/headerimg.png) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -338,6 +428,7 @@
                         height: 85px;
                         border-radius: 43px;
                         position: relative;
+                        margin-right: 15px;
 
                         img {
                             position: absolute;
@@ -348,7 +439,6 @@
                     }
 
                     &_text {
-                        padding-left: 15px;
 
                         &-link {
                             text-decoration: none;
@@ -479,7 +569,7 @@
             display: block;
             width: 48px;
             height: 48px;
-            transition: .5s;
+            transition: .7s;
             padding: 0 10px;
 
             &:hover {

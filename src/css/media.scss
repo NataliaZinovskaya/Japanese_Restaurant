@@ -1,12 +1,243 @@
-@media screen and (min-width : 320px) and (max-width : 760px) {}
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+    .hidden-menu-wrapper {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header-information {
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-information__text-opening {
+        font-size: 45px;
+    }
+
+    .header-information__text-opening_bold {
+        font-size: 62px;
+    }
+
+    .header-information__link-learn-more {
+        font-size: 35px;
+        width: 230px;
+    }
+
+    .actually-block__image {
+        display: none;
+    }
+
+    .actually-block__title {
+        padding-top: 50px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .actually-block__text {
+        padding-left: 0;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .actually-block {
+        min-height: 325px;
+    }
+
+    .about-us-wrapper {
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+
+    .about-us-block {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-us-block__image {
+        padding-top: 45px;
+    }
+
+    .bring-traditions-our-menu__description-title {
+        padding-top: 30px !important;
+    }
+
+    .bring-traditions-our-menu__description-text {
+        width: 90% !important;
+    }
+
+    .bring-traditions-our-menu-wrapper {
+        padding: 10px;
+    }
+
+    .simple-things__title {
+        padding-top: 60px;
+    }
+
+    .simple-things__text {
+        width: 90%;
+    }
+
+    .discover-our-menu-content {
+        flex-direction: column;
+    }
+
+    .discover-our-menu-content__left,
+    .discover-our-menu-content__right {
+        max-width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .discover-our-menu-content__left-box_image {
+        width: 215px !important;
+    }
+
+    .events-content {
+        padding-bottom: 60px;
+    }
+
+    .events__title {
+        font-size: 60px;
+    }
+
+    .simple-things__image {
+        padding-bottom: 60px;
+    }
+
+    .events-content-box {
+        max-width: 300px;
+        margin: 0 auto;
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
+
+    .events-content-box__description {
+        min-height: 250px;
+    }
+
+    .events-content-box__description-text {
+        padding: 11px 20px 30px 20px;
+    }
+
+    .events-content-box__image img {
+        width: 300px;
+    }
+
+    .footer__text {
+        width: 90%;
+    }
+
+    .footer__social-link-1,
+    .footer__social-link-2,
+    .footer__social-link-3,
+    .footer__social-link-4,
+    .footer__social-link-5 {
+        padding: 0 3px;
+    }
+}
 
 
 
-@media screen and (min-width : 768px) and (max-width : 1024px) {}
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+
+    .hidden-menu-wrapper {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header-information {
+        width: 400px;
+    }
+
+    .about-us-wrapper {
+        justify-content: space-around;
+    }
+
+    .about-us-block__text {
+        width: 90%;
+    }
+
+    .about-us-block {
+        width: 25%;
+    }
+
+    .about-us-block__image {
+        padding-top: 60px;
+    }
+
+    .bring-traditions-our-menu-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .simple-things__text {
+        width: 90%;
+    }
+
+    .discover-our-menu-content {
+        justify-content: space-around !important;
+    }
+
+    .discover-our-menu-content__left-box_image {
+        width: 230px !important;
+    }
+
+    .discover-our-menu-content__left-box_image {
+        margin: 20px;
+    }
+
+    .events-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .events-content-box {
+        margin: 20px;
+    }
+
+    .footer__text {
+        width: 80%;
+    }
+}
 
 
 
-@media screen and (min-width : 1224px) {}
+@media screen and (min-width : 1024px) and (max-width : 1224px) {
+
+    .header__nav {
+        display: block;
+    }
+
+    .header-information {
+        width: 435px;
+    }
+
+    .header__nav-links-list {
+        justify-content: center;
+    }
+
+    .hidden-menu-wrapper {
+        display: none;
+    }
+
+    .discover-our-menu-content__left-box_image {
+        width: 160px !important;
+    }
+
+    .events-content-box__description {
+        min-height: 290px;
+    }
+}
 
 
 @media screen and (min-width : 1824px) {}
