@@ -34,9 +34,7 @@
     width: 100%;
     background-color: #c7d1ad;
     transition: left 0.9s;
-    /*Замедление выдвижения слева*/
     left: -100vh;
-    /*Скрыть меню слева*/
     z-index: 10;
 }
 
@@ -60,11 +58,9 @@
 
 .hidden-menu-list-ticker {
     display: none;
-    /*Скрыть checkbox*/
 }
 
 .hidden-menu-button {
-    /*Положение кнопки*/
     padding: 5px;
     position: fixed;
     top: 5px;
@@ -76,7 +72,6 @@
 }
 
 .hidden-menu-button span {
-    /*Редактировать вид общего span, как дочернего hidden-menu__button*/
     display: block;
     height: 5px;
     background-color: #9baf6d;
@@ -85,7 +80,6 @@
 }
 
 .hidden-menu-list-ticker:checked~.hidden-menu-button {
-    /*При нажатии определяет, на сколько изображение меню сдвинется влево*/
     right: 270px;
 }
 
@@ -99,7 +93,6 @@
 }
 
 .hidden-menu-list-ticker:checked~.hidden-menu-button .hidden-menu-second-line {
-    /*При нажатии скрывает среднюю линию*/
     opacity: 0;
 }
 
@@ -564,52 +557,27 @@
         padding-bottom: 40px;
         justify-content: center;
 
-        &-link-1 {
-            background: url(../img/fb1.png) center no-repeat;
+        &-link {
             display: block;
             width: 48px;
             height: 48px;
             transition: .7s;
-            padding: 0 10px;
+            margin: 0 10px;
+            font-size: 30px;
+            color: #212121;
+            background-color: #fff;
+            position: relative;
+            border-radius: 50%;
 
             &:hover {
-                background: url(../img/fb11.png) center no-repeat;
+                background-color: #afc67b;
             }
-        }
 
-        &-link-2 {
-            @extend .footer__social-link-1;
-            background: url(../img/tw1.png) center no-repeat;
-
-            &:hover {
-                background: url(../img/tw11.png) center no-repeat;
-            }
-        }
-
-        &-link-3 {
-            @extend .footer__social-link-1;
-            background: url(../img/in1.png) center no-repeat;
-
-            &:hover {
-                background: url(../img/in11.png) center no-repeat;
-            }
-        }
-
-        &-link-4 {
-            @extend .footer__social-link-1;
-            background: url(../img/px1.png) center no-repeat;
-
-            &:hover {
-                background: url(../img/px11.png) center no-repeat;
-            }
-        }
-
-        &-link-5 {
-            @extend .footer__social-link-1;
-            background: url(../img/gg1.png) center no-repeat;
-
-            &:hover {
-                background: url(../img/gg11.png) center no-repeat;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
